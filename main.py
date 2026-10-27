@@ -14,7 +14,7 @@ def check_country(e):
 #add a country
     country["sm"] = "Somalia"
    
-    display(country.get(country_code, "Country code not found."), target = "output1")
+    display(country.get(country_code, "not found."), target = "output1")
 
 
 def show_country(e):
@@ -32,8 +32,10 @@ def show_country(e):
     country_code = document.getElementById("countries").value.lower()
 
     show_country= country_code in country
+    
+    list_country = list(country.keys())
 
     display("The number of countries are", len(country), target = "output1")
     display("Is the country in the dictionary?", show_country, target= "output1")
-
+    display("What are the countries in the list?", list_country, target= "output1")
         
